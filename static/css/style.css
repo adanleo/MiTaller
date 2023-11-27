@@ -1,0 +1,256 @@
+
+
+body {
+  background-image: url(../MULTIMEDIA/IMAGEN\ CAMINO.jpg);
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #333;
+}
+
+.login{
+  overflow: hidden;
+  background-color: rgba(221, 210, 210, 0.432);
+  border-radius: 10px;
+  position: absolute;
+  width: 400px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 5px 10px 10px rgb(83, 95, 97);
+  border-color: #333;
+  border-width: 10px;
+}
+
+.register{
+  overflow: hidden;
+  background-color: rgba(221, 210, 210, 0.74);
+  border-radius: 10px;
+  position: absolute;
+  width: 400px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 5px 10px 10px rgb(83, 95, 97);
+  border-color: #333;
+  border-width: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: xx-large;
+  line-height: 5px;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+}
+
+header {
+  background-color: antiquewhite;
+}
+
+.navbar {
+  text-align: center;
+}
+
+.titulo {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
+  font-size: xx-large;
+  line-height: 5px;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  color: darkblue;
+}
+
+.centro {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  border-style: solid;
+}
+
+.ingreso {
+  display: grid;
+  grid-area: auto;
+  grid-column: auto;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+.registro {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+.pieindex {
+  border-style: solid;
+  border-radius: 20px;
+  padding: 5px;
+  color: rgb(121, 148, 11);
+}
+
+.a {
+  color: yellow;
+}
+/* main2 hace referencia al registro solamente, desde aca en adelante solo se aplica css a la pagina de registro */
+/* para todo el main se aplican el alto maximo, el ancho el margen y el padding */
+.main2 {
+  max-width: 800px;
+  width: 70%;
+  margin: auto;
+  padding: 50px;
+}
+/* el formulario se lo pone en 2 colunmas */
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.formulario__label {
+  display: block;
+  font-weight: 700;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.formulario__grupo-input {
+  position: relative;
+}
+
+.formulario__input {
+  width: 80%;
+  background: #fff;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 40px 0 5px;
+  transition: 0.3s ease all;
+}
+
+.formulario__input:focus {
+  border: 3px solid yellowgreen;
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.formulario__input-error {
+  font-size: 12px;
+  margin-bottom: 0;
+  display: none;
+}
+
+.formulario__input-error-activo {
+  display: block;
+}
+
+.formulario__validacion-estado {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  z-index: 100;
+  font-size: 16px;
+  opacity: 0;
+}
+
+.formulario__checkbox {
+  margin-right: 10px;
+}
+
+.formulario__grupo-terminos,
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+  grid-column: span 2;
+}
+
+.formulario__mensaje {
+  height: 45px;
+  line-height: 45px;
+  background: #f66060;
+  padding: 0 15px;
+  border-radius: 3px;
+  display: none;
+}
+
+.formulario__mensaje-activo {
+  display: block;
+}
+
+.formulario__mensaje p {
+  margin: 0;
+}
+
+.formulario__grupo-btn-enviar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario__btn {
+  height: 45px;
+  line-height: 45px;
+  width: 30%;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.1s ease all;
+}
+
+.formulario__btn:hover {
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
+}
+
+.formulario__mensaje-exito {
+  font-size: 14px;
+  color: #119200;
+  display: none;
+}
+
+.formulario__mensaje-exito-activo {
+  display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+  color: #1ed12d;
+  opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+  color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+  color: #bb2929;
+  opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+  border: 3px solid #bb2929;
+}
+
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+  .formulario {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario__grupo-terminos,
+  .formulario__mensaje,
+  .formulario__grupo-btn-enviar {
+    grid-column: 1;
+  }
+
+  .formulario__btn {
+    width: 100%;
+  }
+}

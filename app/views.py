@@ -36,7 +36,7 @@ def sign_in(request):
 def index(request):
     if request.method == 'GET':
         form = LoginForm()
-        return render(request, 'users/base.html', {'form': form})
+        return render(request, 'base.html', {'form': form})
 
 
 def sign_out(request):
