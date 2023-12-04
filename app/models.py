@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils import timezone
 
 '''
     Modelos de la tablas de la base de datos
@@ -28,3 +29,12 @@ class Car(models.Model):
 
     def __str__(self):
         return f"{self.model}, {self.brand}"
+
+
+class Description(models.Model):
+    car = models.ForeignKey(Car, on_delete=models.CASCADE, default=None)
+    date_of_issue = models.DateTimeField(default=timezone.now)
+    description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return f"{self.description}"

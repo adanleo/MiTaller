@@ -56,8 +56,8 @@ def sign_up(request):
             user = form.save(commit=False)
             user.username = user.username.lower()
             user.save()
-            client = form_to_client(form, user)
-            client.save()
+            #client = form_to_client(form, user)
+            #client.save()
             messages.success(request, 'You have singed up successfully.')
             login(request, user)
             return redirect('posts')
@@ -68,7 +68,7 @@ def sign_up(request):
             return render(request, 'users/register.html', context)
 
 
-def form_to_client(form, user):
+'''def form_to_client(form, user):
     name = form.cleaned_data['name']
     document_number = form.cleaned_data['document_number']
     phone_number = form.cleaned_data['phone_number']
@@ -80,3 +80,4 @@ def form_to_client(form, user):
     client.phone_number = phone_number
     client.address = address
     return client
+'''
